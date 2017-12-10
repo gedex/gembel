@@ -5,15 +5,11 @@ ghembel &mdash; command line app to bulk update issue labels GitHub repositories
 
 ## Install
 
+### From brew
+
+TODO
+
 ### From binaries
-
-TODO
-
-### From OSX brew
-
-TODO
-
-### From source
 
 TODO
 
@@ -41,9 +37,6 @@ GITHUB_TOKEN="token" gembel <config-file>
             "name": "[Type] Enhancement",
             "color": "c7def8",
             "replace": "enhancement"
-        },
-        {
-            "name": "[Status] In-Progress"
         }
     ],
     "repositories": [
