@@ -45,8 +45,7 @@ GITHUB_TOKEN="token" gembel <config-file>
         },
         {
             "name": "[Type] Enhancement",
-            "color": "c7def8",
-            "replace": "enhancement"
+            "color": "c7def8"
         }
     ],
     "repositories": [
@@ -57,5 +56,5 @@ GITHUB_TOKEN="token" gembel <config-file>
 ```
 
 It just require `labels` (label properties to apply) and `repositories` (the
-target repositories). If label has `replace` property, it will replace matching
-label in the repository with the new one in `name`.
+target repositories). If label has `replace` property (optional), it will replace
+matching label in the repository with the new one in `name`.
