@@ -284,11 +284,13 @@ func GetRepoLabels(repoPath string) (m map[string]string, err error) {
 func usage(err error) {
 	fmt.Printf("Error: %v\n", err)
 	fmt.Println(`
-gembel <config-file>
+Usage:
+
+    gembel <config-file>
 
 To specifiy GITHUB_TOKEN when running it:
 
-GITHUB_TOKEN=token gembel <config-file>
+    GITHUB_TOKEN=token gembel <config-file>
 	`)
 	os.Exit(1)
 }
