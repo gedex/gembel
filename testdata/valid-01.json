@@ -1,0 +1,22 @@
+{
+	"labels": [
+		{
+			"name": "[Type] Bug",
+			"color": "e11d21",
+			"replace": "bug"
+		},
+		{
+			"name": "[Type] Enhancement",
+			"color": "c7def8",
+			"replace": "enhancement"
+		},
+		{
+			"name": "[Status] In-Progress",
+			"color": "c7def8"
+		}
+	],
+	"repositories": [
+		"gedex/repo-name",
+		"gedex/another-repo-name"
+	]
+}

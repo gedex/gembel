@@ -1,0 +1,8 @@
+{
+	"labels": [
+		{
+			"name": "[Type] Bug",
+			"color": "e11d21",
+			"replace": "bug"
+		},
+}

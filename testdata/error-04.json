@@ -1,0 +1,10 @@
+{
+	"labels": [
+		{
+			"name": "[Type] Bug"
+		}
+	],
+	"repositories": [
+		"gedex/repo-name"
+	]
+}
