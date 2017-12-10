@@ -19,6 +19,10 @@ var (
 	ghCtx    context.Context
 
 	reHex = regexp.MustCompile("^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
+
+	version = "master"
+	commit  = "none"
+	date    = "unknown"
 )
 
 type Config struct {
@@ -116,7 +120,7 @@ func (c *Config) check() error {
 }
 
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) < 2 {
 		usage(errors.New("missing config file"))
 	}
 	if os.Getenv("GITHUB_TOKEN") == "" {
@@ -281,16 +285,26 @@ func GetRepoLabels(repoPath string) (m map[string]string, err error) {
 	return m, err
 }
 
+func getVersion() string {
+	return fmt.Sprintf("%v, commit %v, built at %v", version, commit, date)
+}
+
 func usage(err error) {
 	fmt.Printf("Error: %v\n", err)
-	fmt.Println(`
+	fmt.Printf(`
+Name:
+  gembel - bulk update issue labels of GitHub repositories.
+
+Version:
+  %s
+
 Usage:
+  gembel <config-file>
 
-    gembel <config-file>
+  To specifiy GITHUB_TOKEN when running it:
 
-To specifiy GITHUB_TOKEN when running it:
+  GITHUB_TOKEN=token gembel <config-file>
+`, getVersion())
 
-    GITHUB_TOKEN=token gembel <config-file>
-	`)
 	os.Exit(1)
 }
