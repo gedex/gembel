@@ -25,7 +25,7 @@ go get github.com/gedex/gembel
 
 ## Using gembel
 
-Before using gembel, you need `GITHUB_TOKEN` (can be retrieved from [here](#)).
+Before using gembel, you need `GITHUB_TOKEN` (can be retrieved from [here](https://github.com/settings/tokens)).
 Once you've that, set it to your bash profile or provide it when running the app:
 
 ```
