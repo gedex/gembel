@@ -55,6 +55,6 @@ GITHUB_TOKEN="token" gembel <config-file>
 }
 ```
 
-It just require `labels` (label properties to apply) and `repositories` (the
+It requires `labels` (label properties to apply) and `repositories` (the
 target repositories). If label has `replace` property (optional), it will replace
 matching label in the repository with the new one in `name`.
