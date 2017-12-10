@@ -1,7 +1,7 @@
 gembel
 ======
 
-ghembel &mdash; command line app to bulk update GitHub issue labels.
+gembel &mdash; command line app to bulk update GitHub issue labels.
 
 ## Install
 
