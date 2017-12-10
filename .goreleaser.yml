@@ -1,0 +1,60 @@
+homepage: &homepage https://github.com/gedex/gembel
+description: &description Bulk update GitHub issue labels
+project_name: gembel
+release:
+  github:
+    owner: gedex
+    name: gembel
+builds:
+- goos:
+  - linux
+  - darwin
+  - windows
+  goarch:
+  - amd64
+  - "386"
+  goarm:
+  - "6"
+  main: .
+  ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
+  binary: gembel
+  hooks: {}
+archive:
+  format: tar.gz
+  name_template: '{{ .Binary }}_{{.Version}}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{
+    .Arm }}{{ end }}'
+  files:
+  - LICENCE
+  - README*
+  replacements:
+    386: i386
+    amd64: x86_64
+  format_overrides:
+    - goos: windows
+      format: zip
+brew:
+  github:
+    owner: gedex
+    name: homebrew-tap
+  commit_author:
+    name: gedex
+    email: admin@gedex.web.id
+  folder: Formula
+  homepage: *homepage
+  description: *description
+  dependencies:
+    - git
+fpm:
+  homepage: *homepage
+  description: *description
+  maintainer: Akeda Bagus <admin@gedex.web.id>
+  license: MIT
+  vendor: Gembel
+  formats:
+    - deb
+  dependencies:
+    - git
+snapshot:
+  name_template: SNAPSHOT-{{ .Commit }}
+build:
+  hooks: {}
