@@ -7,11 +7,21 @@ ghembel &mdash; command line app to bulk update GitHub issue labels.
 
 ### From brew
 
-TODO
+```
+brew install gedex/tap/gembel
+```
+
+Check the [tap source](https://github.com/gedex/homebrew-tap) for more details.
 
 ### From binaries
 
-TODO
+Download your preferred flavor from the [releases page](https://github.com/gedex/gembel/releases/latest) and install manually.
+
+### From Go Get
+
+```
+go get github.com/gedex/gembel
+```
 
 ## Using gembel
 
