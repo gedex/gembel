@@ -57,4 +57,6 @@ GITHUB_TOKEN="token" gembel <config-file>
 
 It requires `labels` (label properties to apply) and `repositories` (the
 target repositories). If label has `replace` property (optional), it will replace
-matching label in the repository with the new one in `name`.
+matching label in the repository with the new one in `name`. If you want to
+mimic labels from another repository, you can use [glek](https://github.com/gedex/glek)
+to export repository issue labels.
